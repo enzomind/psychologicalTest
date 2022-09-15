@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/default_hy.css">
+  <link rel="stylesheet" href="/css/main_hy.css">
+  <link rel="stylesheet" href="/css/qna_hy.css">
+  <link rel="stylesheet" href="/css/animation_hy.css">
+  <link rel="stylesheet" href="/css/result_hy.css">
+</head>
+
+<body>
+  <div class="container">
+    <form action="/insertuserinfo" method="post">
+    <section id="userinfo" class="mx-auto my-5 py-5 px-3">
+      <div id="userinfo-div" class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto"></div>
+        <p>테스트를 진행하시려면 정보를 입력해주세요.</p>
+        <label for="name">이름</label>
+        <input type="text" name="mname" id="name" placeholder="이름을 입력해주세요"><br>
+        만<input type="text" name="mage" id="age" placeholder="나이"><br>
+        <select name="mgender" id="gender">
+          <option value="남">남</option>
+          <option value="여">여</option>
+        </select><br>
+        <input type="submit" class="btn btn-outline-danger mt-3" onclick="js:start()" value="제출"/>
+      </div>
+    </section>
+  </form>
+    <section id="main" class="mx-auto my-5 py-5 px-3">
+      <h1>나는 프론트 엔드? 아니면 백 엔드?</h1>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <img src="/img/coding-main_hy.jpg" alt="mainImage" class="img-fluid">
+      </div>
+      <p>
+        나는 어떤 개발자 스타일에 가까울까?<br>
+        아래 시작하기 버튼을 눌러 시작해 주십시오.
+      </p>
+      <button type="button" class="btn btn-outline-danger mt-3" onclick="js:begin()">시작하기</button>
+      <p>*진지하게 받아들이지는 말고 가벼운 마음으로<br>즐겨주시면 감사하겠습니다. </p>
+      <p>*한 번 입력하면 수정은 불가능하오니 신중하게 선택해주세요.</p>
+    </section>
+    <section id="qna">
+      <div class="status mx-auto mt-5">
+
+        <div class="statusBar">
+        </div>
+      </div>
+      <div class="qBox my-5 py-3 mx-auto">
+
+      </div>
+      <div class="answerBox">
+
+      </div>
+    </section>
+    <section id="result" class="mx-auto my-5 py-5 px-3">
+      <h1>당신의 결과는?!</h1>
+      <div class="resultname">
+
+      </div>
+      <div id="resultImg" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+
+      </div>
+      <div class="resultDesc">
+
+      </div>
+      <button type="button" class="kakao mt-3 py-2 px-3" onclick="">공유하기</button>
+    </section>
+    <script src="/js/data_hy.js" charset="utf-8"></script>
+    <script src="/js/start_hy.js" charset="utf-8"></script>
+    <script src="/js/share_hy.js" charset="utf-8"></script>
+  </div>
+</body>
+
+</html>

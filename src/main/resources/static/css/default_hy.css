@@ -1,0 +1,13 @@
+body{
+  background-color: rgb(0, 148, 69);
+}
+
+*{
+  font-family: 'old-font', cursive;
+}
+
+
+@font-face {
+  font-family: 'old-font';
+  src: url(../font/DungGeunMo.ttf);
+}

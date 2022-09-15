@@ -1,6 +1,7 @@
-package HY.repository;
+package com.example.psychologicaltest.HY.repository;
 
-import HY.entity.Developer;
+
+import com.example.psychologicaltest.HY.entity.Developer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
