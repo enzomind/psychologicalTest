@@ -1,4 +1,4 @@
-package HY.entity;
+package com.example.psychologicaltest.HY.entity;
 
 
 import lombok.*;
@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name="developer")
+@Table(name="hytest")
 @ToString
 @Getter
 @Builder
@@ -17,7 +17,7 @@ import javax.persistence.*;
 public class Developer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id ;
+    private long id;
     @Column(length = 200, nullable = false)
     private String a1;
     @Column(length = 200, nullable = false)

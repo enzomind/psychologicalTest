@@ -1,4 +1,4 @@
-package YJ.entity;
+package com.example.psychologicaltest.YJ.entity;
 
 import lombok.*;
 
