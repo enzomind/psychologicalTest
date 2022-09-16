@@ -23,6 +23,7 @@ public interface CheckListService {
                 .build();
     }
 
+
     default GetQueryDTO entityToDto(QueryListEntity queryLIstEntity){
         return GetQueryDTO.builder()
                 .id(queryLIstEntity.getId())
