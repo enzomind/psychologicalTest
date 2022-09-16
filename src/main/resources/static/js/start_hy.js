@@ -7,6 +7,7 @@ let final = {};
 
 const endPoint = 12;
 const select = [0, 0];
+var params;
 
 function calResult() {
     console.log(select);
@@ -38,8 +39,8 @@ function setResult() {
     resultDesc.innerHTML = infoList[point].desc;
 
     var sentances = selection['choice'].slice(1).split('#');
-    for (let i = 1; i < sentances.length+1; i++) {
-        final["a" + i] = sentances[i-1]
+    for (let i = 1; i < sentances.length + 1; i++) {
+        final["a" + i] = sentances[i - 1]
     }
     final['result'] = resultName.innerHTML;
     insertUInfo()
@@ -49,7 +50,7 @@ function setResult() {
 
 function insertUInfo() {
     // json 형식으로 데이터 set
-    var params = {
+    params = {
         mname: $("#name").val()
         , mgender: $("#gender").val()
         , mage: $("#age").val()
@@ -78,15 +79,11 @@ function insertAInfo() {
         data: final,            // Json 형식의 데이터이다.
         dataType: "json",
         success: function (res) { // 비동기통신의 성공일경우 success콜백으로 들어옵니다. 'res'는 응답받은 데이터이다.
-
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) { // 비동기 통신이 실패할경우 error 콜백으로 들어옵니다.
-
         }
     });
-
 }
-
 
 
 function goResult() {
@@ -172,20 +169,24 @@ function begin() {
 
 
 function start() {
-    userinfo.style.WebkitAnimation = "fadeOut 1s";
-    userinfo.style.animation = "fadeOut 1s";
-    setTimeout(() => {
-        main.style.WebkitAnimation = "fadeIn 1s";
-        main.style.animation = "fadeIn 1s";
+
+    if ($("#name").value === null || $("#age").value === null || $("#gender").value === null) {
+        alert("자료를 입력해주세요.")
+    } else {
+        userinfo.style.WebkitAnimation = "fadeOut 1s";
+        userinfo.style.animation = "fadeOut 1s";
         setTimeout(() => {
-            userinfo.style.display = "none";
-            main.style.display = "block"
+            main.style.WebkitAnimation = "fadeIn 1s";
+            main.style.animation = "fadeIn 1s";
+            setTimeout(() => {
+                userinfo.style.display = "none";
+                main.style.display = "block"
+            }, 450);
         }, 450);
-    }, 450);
+    }
 }
 
 
-$(document).ready(function () {
-
-
-})
+function home() {
+    window.location.href = 'index.html';
+}
