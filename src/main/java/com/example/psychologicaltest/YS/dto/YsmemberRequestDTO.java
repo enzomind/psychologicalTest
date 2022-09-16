@@ -1,6 +1,6 @@
-package com.example.psychologicaltest.ys.dto;
+package com.example.psychologicaltest.YS.dto;
 
-import com.example.psychologicaltest.ys.entity.Ysmember;
+
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,8 +13,8 @@ public class YsmemberRequestDTO { //사용자 정보 입력받을 폼 정보 실
     private String mgender;
     private int mage;
 
-    public Ysmember toEntity() {
-        return Ysmember.builder()
+    public com.example.psychologicaltest.YS.entity.Ysmember toEntity() {
+        return com.example.psychologicaltest.YS.entity.Ysmember.builder()
                 .mname(mname)
                 .mgender(mgender)
                 .mage(mage)

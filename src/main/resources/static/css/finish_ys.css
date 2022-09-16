@@ -1,0 +1,27 @@
+#finish{
+    background-color:whitesmoke;
+    width : 80%;
+    text-align : center;
+    border-radius : 20px;
+}
+
+.finishname{
+    font-size: 26px;
+}
+
+.finishDesc{
+    font-size: 20px;
+}
+
+.kakao {
+    color: white;
+    background-color: #FEE500;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 20px;
+}
+
+.kakao:hover, .kakao:focus{
+    background-color: saddlebrown;
+    color: #FEE500;
+}

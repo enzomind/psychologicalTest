@@ -1,82 +1,55 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
+const finish = document.querySelector("#finish");
 const endPoint = 12;
 // const select = [0,0,0,0,0,0,0,0,0,0,0,0]; //결과값 저장을 위한 배열
 const select = [0,0,0,0,0,0,0,0,0,0,0,0];
+let paramData;
 
 function calResult(){ //결과값 계산
-    //addanswer 함수에서의 알고리즘 개선 작업으로 아래 로직 주석처리
-
-    // var pointArray = [
-    //     {name: 'mouse', value: 0, key: 0},
-    //     {name: 'cow', value: 0, key: 1},
-    //     {name: 'tiger', value: 0, key: 2},
-    //     {name: 'rabbit', value: 0, key: 3},
-    //     {name: 'dragon', value: 0, key: 4},
-    //     {name: 'snake', value: 0, key: 5},
-    //     {name: 'horse', value: 0, key: 6},
-    //     {name: 'sheep', value: 0, key: 7},
-    //     {name: 'monkey', value: 0, key: 8},
-    //     {name: 'chick', value: 0, key: 9},
-    //     {name: 'dog', value: 0, key: 10},
-    //     {name: 'pig', value: 0, key: 11},
-    // ]
-    // for(let i=0; i<endPoint; i++) {
-    //     var target = qnaList[i].a[select[i]];
-    //     for(let j=0; j<target.type.length; j++){ //type의 길이가 아닌 타겟의 타입에 대한 길이로 잡아야 오류가 안남
-    //         for (let k=0; k<pointArray.length; k++) {
-    //             if(target.type[j] === pointArray[k].name){
-    //                 pointArray[k].value += 1;
-    //             }
-    //         }
-    //     }
-    // }
-
-    // var resultArray = pointArray.sort(function (a,b){
-    //     if(a.value > b.value){
-    //         return -1;
-    //     }
-    //     if(a.value < b.value){
-    //         return 1;
-    //     }
-    //     return 0;
-    // });
-
-
-    var result = select.indexOf(Math.max(...select)); //...select <- 전개구문으로써 선택한 배열을 펼치게해줌.
-                                                      //배열의 최대값을 가지고있는 인덱스를 result에 저장
+    var result = select.indexOf(Math.max(...select)); //...select <- 전개구문으로써 선택한 배열을 펼치게해줌.//배열의 최대값을 가지고있는 인덱스를 result에 저장
     return result;
-
-    // console.log(resultArray);
-    // let resultword = resultArray[0].key;
-    // return resultword;
 }
 
+function insertResult() {
+    let pointData = calResult();
+    paramData = infoList[pointData].param;
 
-function setResult(){
-    // let resultword = resultArray[0].key;
+    $.ajax({
+        type: "POST",            // HTTP method type(GET, POST) 형식이다.
+        url: "/insertResult",      // 컨트롤러에서 대기중인 URL 주소이다.
+        data: {
+            tresult: paramData
+        },            // Json 형식의 데이터이다.
+        dataType: "json",
+        success: function (res) { // 비동기통신의 성공일경우 success콜백으로 들어옵니다. 'res'는 응답받은 데이터이다.
+            location.href = "/ys/ysfinish"
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) { // 비동기 통신이 실패할경우 error 콜백으로 들어옵니다.
+            location.href = "/ys/ysfinish"
+        }
+    });
+}
+
+function setResult_ys(){
     let point = calResult();
-    const resultName = document.querySelector('.resultname');
-    resultName.innerHTML = infoList[point].name; //infoList의 n번째 name값을 가져와 innerHTML.. 사악하다..!!
+    const finishName = document.querySelector('.finishname');
+    finishName.innerHTML = infoList[point].name; //infoList의 n번째 name값을 가져와 innerHTML.. 사악하다..!!
 
-    var resultImg = document.createElement('img');
-    const imgDiv = document.querySelector('#resultImg');
-    var imgURL = 'img/image-ys' + point + '.png';
+    var finishImg = document.createElement('img');
+    const imgDiv = document.querySelector('#finishImg');
+    var imgURL = '/img/image-ys' + point + '.png';
 
-    resultImg.src = imgURL;
-    resultImg.alt = point;
-    resultImg.classList.add('img-fluid');
-    imgDiv.appendChild(resultImg);
+    finishImg.src = imgURL;
+    finishImg.alt = point;
+    finishImg.classList.add('img-fluid');
+    imgDiv.appendChild(finishImg);
 
-    const resultDesc = document.querySelector('.resultDesc');
+    const finishDesc = document.querySelector('.finishDesc');
 
-    resultDesc.innerHTML = infoList[point].desc;
-
+    finishDesc.innerHTML = infoList[point].desc;
 }
-
-
-
 
 function goResult(){
     qna.style.WebkitAnimation = "fadeOut 1s";
@@ -90,8 +63,7 @@ function goResult(){
             result.style.display = "block";
         }, 450)
     })
-    setResult();
-    calResult();
+    // setResult();
 }
 
 
@@ -132,8 +104,8 @@ function addAnswer(answerText, qIdx, idx) {
             }
 
             for(let i = 0; i<children.length; i++) {
-            children[i].style.display = 'none';
-        }
+                children[i].style.display = 'none';
+            }
             goNext(++qIdx);
         }, 450)
     }, false); //버튼 클릭 감지하기위해 이벤트 리스너 추가
@@ -146,7 +118,7 @@ function addAnswer(answerText, qIdx, idx) {
 function goNext(qIdx){
 
     if (qIdx === endPoint) {
-        goResult(); //추후 여기서 DB보내는 작업을 할 예정
+        goResult();
 
         return;
     }
@@ -175,8 +147,8 @@ function begin() {
         qna.style.WebkitAnimation = "fadeIn 1s";
         qna.style.animation = "fadeIn 1s";
         setTimeout(()=>{
-           main.style.display = "none";
-           qna.style.display = "block";
+            main.style.display = "none";
+            qna.style.display = "block";
         }, 450)
 
         let qIdx = 0;

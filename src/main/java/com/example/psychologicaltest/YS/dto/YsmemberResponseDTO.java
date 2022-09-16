@@ -1,6 +1,6 @@
-package com.example.psychologicaltest.ys.dto;
+package com.example.psychologicaltest.YS.dto;
 
-import com.example.psychologicaltest.ys.entity.Ysmember;
+import com.example.psychologicaltest.YS.entity.Ysmember;
 import lombok.Getter;
 
 @Getter

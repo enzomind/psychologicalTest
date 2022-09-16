@@ -1,9 +1,6 @@
-package com.example.psychologicaltest.ys.entity;
+package com.example.psychologicaltest.YS.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -12,6 +9,7 @@ import javax.persistence.*;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Ystest {
 
     @Id

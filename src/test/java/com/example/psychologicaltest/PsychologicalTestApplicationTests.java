@@ -1,13 +1,13 @@
 package com.example.psychologicaltest;
 
 
-import com.example.psychologicaltest.ys.entity.Ysmember;
-import com.example.psychologicaltest.ys.entity.Ystest;
-import com.example.psychologicaltest.ys.repository.YstestRepository;
+import com.example.psychologicaltest.YS.entity.Ysmember;
+import com.example.psychologicaltest.YS.entity.Ystest;
+import com.example.psychologicaltest.YS.repository.YstestRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import com.example.psychologicaltest.ys.repository.YsmemberRepository;
+import com.example.psychologicaltest.YS.repository.YsmemberRepository;
 
 
 @SpringBootTest
