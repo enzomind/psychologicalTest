@@ -17,13 +17,12 @@ public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long mno;
-    @Column(length = 200, nullable = false)
-    private String mname;
-    @Column(length = 200, nullable = false)
-    private String mgender;
-    @Column(length = 200, nullable = false)
-    private Long mage;
 
+    private String mname;
+
+    private String mgender;
+
+    private Long mage;
 
 
 }
