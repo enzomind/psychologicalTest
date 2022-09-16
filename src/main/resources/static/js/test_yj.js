@@ -13,6 +13,8 @@ $(document).ready(function(){
     var page_count;
     var page_position = 1;
 
+
+
     pages = $(".slide ul");
     page_count = pages.children().length;
 
