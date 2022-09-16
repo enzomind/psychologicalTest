@@ -1,9 +1,9 @@
-package YJ.controller;
+package com.example.psychologicaltest.YJ.controller;
 
-import YJ.entity.Mbti;
-import YJ.entity.User;
-import YJ.repository.MbtiRepository;
-import YJ.repository.UserRepository;
+import com.example.psychologicaltest.YJ.entity.Mbti;
+import com.example.psychologicaltest.YJ.entity.User;
+import com.example.psychologicaltest.YJ.repository.MbtiRepository;
+import com.example.psychologicaltest.YJ.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
