@@ -19,10 +19,11 @@ public class HyController {
 
 
 
-    @PostMapping("/insertuserinfo")
-    public void insertinfo(@RequestParam String mname, @RequestParam String mgender, @RequestParam Long mage ) {
-        Users user = Users.builder().mname(mname).mage(mage).mgender(mgender).build();
-        userRepository.save(user);
-    }
+//    @PostMapping("/insertuserinfo")
+//    public String insertinfo(@RequestParam String mname, @RequestParam String mgender, @RequestParam Long mage ) {
+//        Users user = Users.builder().mname(mname).mage(mage).mgender(mgender).build();
+//        userRepository.save(user);
+//        System.out.println(user);
+//    }
 
 }
