@@ -3,33 +3,91 @@ const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
 const finish = document.querySelector("#finish");
 const endPoint = 12;
-// const select = [0,0,0,0,0,0,0,0,0,0,0,0]; //결과값 저장을 위한 배열
 const select = [0,0,0,0,0,0,0,0,0,0,0,0];
-let paramData;
+
+function isValid() { //유효성 검사 함수
+
+    const form = document.getElementById('form');
+
+    if (!form.mname.value.trim()) {
+        alert('이름을 입력해 주세요.');
+        form.mname.value = '';
+        form.mname.focus();
+        return false;
+    }
+
+    if (!form.mage.value.trim()) {
+        alert('나이를 입력해 주세요.');
+        form.mage.value = '';
+        form.mage.focus();
+        return false;
+    }
+
+    if (!form.mgender.value.trim()) {
+        alert('성별을 선택해 주세요');
+        form.mgender.value = '';
+        return false;
+    }
+
+    return true;
+}
+
+
+function insertMemberInfo(){
+
+    if (!isValid()) {
+        return false;
+    }
+
+    const form = document.getElementById('form');
+
+    const memberParams = {
+        mname: form.mname.value,
+        mage: form.mage.value,
+        mgender: form.mgender.value
+    };
+
+    $.ajax({
+        type: "POST",
+        url: "/insertMember",
+        data: memberParams,
+        dataType: "text",
+        error: function (xhr, status, error) {
+            alert("에러 발생 : " + error);
+        },
+        success: function (data) {
+            insertResult();
+        }
+    });
+
+}
+
+
+
+function insertResult() {
+    let pointData = calResult();
+    const paramData = infoList[pointData].param;
+
+    $.ajax({
+        type: "POST",
+        url: "/insertResult",
+        data: {
+            tresult: paramData
+        },
+        dataType: "text",
+        error: function (xhr, status, error) {
+            alert("에러 발생 : " + error);
+        },
+        success: function (data) {
+            location.replace('/ys/ysfinish');
+        }
+    });
+
+}
 
 function calResult(){ //결과값 계산
     var result = select.indexOf(Math.max(...select)); //...select <- 전개구문으로써 선택한 배열을 펼치게해줌.//배열의 최대값을 가지고있는 인덱스를 result에 저장
     return result;
-}
-
-function insertResult() {
-    let pointData = calResult();
-    paramData = infoList[pointData].param;
-
-    $.ajax({
-        type: "POST",            // HTTP method type(GET, POST) 형식이다.
-        url: "/insertResult",      // 컨트롤러에서 대기중인 URL 주소이다.
-        data: {
-            tresult: paramData
-        },            // Json 형식의 데이터이다.
-        dataType: "json",
-        success: function (res) { // 비동기통신의 성공일경우 success콜백으로 들어옵니다. 'res'는 응답받은 데이터이다.
-            location.href = "/ys/ysfinish"
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) { // 비동기 통신이 실패할경우 error 콜백으로 들어옵니다.
-            location.href = "/ys/ysfinish"
-        }
-    });
 }
 
 function setResult_ys(){

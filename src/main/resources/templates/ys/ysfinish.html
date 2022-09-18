@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/css/default_ys.css">
     <link rel="stylesheet" href="/css/animation_ys.css">
     <link rel="stylesheet" href="/css/finish_ys.css">
-
+    <link rel="stylesheet" href="/css/list_ys.css">
 
 </head>
 <body>
@@ -38,9 +38,34 @@
           <button type="button" class="kakao my-3 py-2 px-3">공유하기</button>
       </section>
 
+    <section id="list" class="mx-auto my-5 py-5 px-3">
+
+        <div class="listItem">
+            <table class="table table-hover">
+                <h1>친구들은 이런 결과가 나왔어요!</h1>
+                <thead>
+
+                <tr>
+                    <th>No</th>
+                    <th>이름</th>
+                    <th>성별</th>
+                    <th>동물</th>
+
+                </tr>
+                </thead>
+                    <!-- 월요일날 하자.. -->
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
     <script type="text/javascript" th:src="@{/js/data_ys.js}"></script>
     <script type="text/javascript" th:src="@{/js/start_ys.js}"></script>
     <script>setResult_ys()</script>
+
+
 
 </div>
 </body>
