@@ -1,10 +1,14 @@
-#main {
+#list{
     background-color:whitesmoke;
-    width : 60%;
+    width : 80%;
     text-align : center;
     border-radius : 20px;
 }
 
-p{
+.listItem{
+    font-size: 26px;
+}
+
+.listDesc{
     font-size: 20px;
 }
