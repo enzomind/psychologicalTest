@@ -1,0 +1,18 @@
+#userinfo{
+    background-color: whitesmoke;
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+#main{
+    display: none;
+    background-color: whitesmoke;
+    width: 80%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+p{
+    font-size: 20px;
+}
