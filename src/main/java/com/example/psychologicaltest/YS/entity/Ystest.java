@@ -18,4 +18,6 @@ public class Ystest {
     @Column(length = 20, nullable = false)
     private String tresult;
 
+    @Column(length = 5, nullable = false)
+    private int tcode;
 }

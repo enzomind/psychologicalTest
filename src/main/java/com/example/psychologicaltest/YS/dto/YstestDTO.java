@@ -8,6 +8,6 @@ import lombok.Data;
 public class YstestDTO {
 
     private String tresult;
-
+    private int tcode;
 
 }

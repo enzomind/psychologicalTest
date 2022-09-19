@@ -7,26 +7,28 @@ import com.example.psychologicaltest.YS.entity.Ystest;
 import com.example.psychologicaltest.YS.repository.YsmemberRepository;
 import com.example.psychologicaltest.YS.repository.YstestRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import lombok.extern.log4j.Log4j2;
+import org.springframework.web.bind.annotation.*;
+
 
 @RestController
 @RequiredArgsConstructor
+@Log4j2
 public class YsController {
 
     private final YstestRepository ystestRepository;
     private final YsmemberRepository ysmemberRepository;
+
 
     @RequestMapping(value = "/insertResult", method = RequestMethod.POST)
     public void insertResult(YstestDTO ystestDTO) throws Exception {
 
         Ystest ystest = Ystest.builder()
                 .tresult(ystestDTO.getTresult())
+                .tcode(ystestDTO.getTcode())
                 .build();
 
         ystestRepository.save(ystest);
-
     }
 
     @RequestMapping(value = "/insertMember", method = RequestMethod.POST)
@@ -41,4 +43,6 @@ public class YsController {
         ysmemberRepository.save(ysmember);
 
     }
+
 }
+
