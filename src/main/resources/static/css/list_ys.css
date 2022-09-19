@@ -1,0 +1,14 @@
+#list{
+    background-color:whitesmoke;
+    width : 80%;
+    text-align : center;
+    border-radius : 20px;
+}
+
+.listItem{
+    font-size: 26px;
+}
+
+.listDesc{
+    font-size: 20px;
+}
