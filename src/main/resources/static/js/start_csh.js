@@ -96,6 +96,11 @@ function calResult() {
     return result;
 
 }
+function deleteParent(element) {
+    var parent = element.parentNode;
+    parent.remove();
+}
+
 
 function setResult() {
     let point = calResult(); //point 가장많이선택한 index
@@ -106,17 +111,28 @@ function setResult() {
     const resultName = document.querySelector('.resultName');
     console.log(infoList[point].name + ' ' + 'infoList[point].name ');
     resultName.innerHTML = infoList[point].name;
-    
+
+
 
     var resultImg = document.createElement('img');
-    const imgDiv = document.querySelector('#resultImg');
-    var imgURL = '/img/image-csh' + point + '.png';
+
+        const imgDiv = document.querySelector('#resultImg');
+        var imgURL = '/img/image-csh' + point + '.png';
+
+
+
+
+
 
     resultImg.src = imgURL;
     resultImg.alt = point; //공유하기때 쓸거임
     resultImg.classList.add('img-fluid');
-    imgDiv.appendChild(resultImg);
 
+    imgDiv.appendChild(resultImg);
+        console.log("리절트이미지"+resultImg);
+        console.log(resultImg);
+        console.log("이미지다이브 " +imgDiv);
+        console.log(imgDiv);
 
 
     const resultDesc = document.querySelector('.resultDesc');
@@ -225,6 +241,10 @@ function home() { //집가는거 내가만들었어 뿌잉뿌잉
     var a = document.querySelector('.answerBox'); 
     console.log(a);
     a.innerHTML = null;
+    const imgDiv = document.querySelector('#resultImg');
+    imgDiv.removeChild(imgDiv.lastChild);
+    console.log(imgDiv);
+
 
 }
 
@@ -236,7 +256,9 @@ function testMain() {
     var a = document.querySelector('.answerBox');
     console.log(a);
     a.innerHTML = null;
-
+    const imgDiv = document.querySelector('#resultImg');
+    console.log(imgDiv);
+    imgDiv.removeChild(imgDiv.lastChild);
     window.location.href = 'http://localhost:8080/';
 }
 
