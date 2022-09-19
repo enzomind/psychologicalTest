@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="css/default_csh.css">
+    <link rel="stylesheet" href="css/main_csh.css">
+    <link rel="stylesheet" href="css/qna_csh.css">
+    <link rel="stylesheet" href="css/ani_csh.css">
+    <link rel="stylesheet" href="css/result_csh.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container py-5 class=mx-auto my-5 px-3 py-5" style="display:block;">
+
+        <section id="inputform" style="display:block;">
+            <div >
+                <h1> 테스트 전에! 간단한 정보를 입력해 주세요! </h1>
+                <hr>
+                <p> 이름 : <input type="text" id="mname" name="mname" placeholder="한글만!"> <br></p>
+                <p> 성별 :  <input type="text" id="mgender" name="mgender" placeholder="'남자' or '여자'"> <br></p>
+                <p> 나이 : <input type="number" id="mage" name="mage" placeholder="숫자만 입력해주세요."> <br></p>
+                <button type="button" onclick="formStart()" class="btn btn-secondary mt-3 text-lg-start">입력했어용</button>
+                <button type="button" onclick="testMain()" class="btn btn-secondary mt-3 text-lg-end">홈페이지로</button>
+            </div>
+        </section>
+
+        <section id="main" class="mx-auto my-5 px-3 py-5" style="display:none;">
+            <h1 class="pt-5">재미로 보는 MBTI 유형 테스트!</h1>
+            <div class="mx-auto col-12 col-lg-6 col-md-8 col-sm-10">
+                <img src="/img/main_csh.png" alt="mainImage" class="img-fluid">
+            </div>
+            <p>
+                요즘 핫한 MBTI! <br>
+                간단한 질문을 통해 성향을 확인해 볼까요? <br>
+                아래의 버튼을 눌러 시작해주세요
+            </p>
+
+
+            <button type="button" onclick="begin()" class="btn btn-secondary mt-3 text-lg-start">시작하기</button>
+            <button type="button" onclick="testMain()" class="btn btn-secondary mt-3 text-lg-end">홈페이지로</button>
+
+        </section>
+
+        <section id="qna">
+            <div class="status mx-auto">
+                <div class="statusBar ">
+
+                </div>
+            </div>
+
+            <div class="qBox my-5 py-3 mx-auto">
+
+            </div>
+            <div class="answerBox">
+
+            </div>
+            <button type="button" onclick="home()" class="btn btn-secondary mt-3">테스트 처음으로</button>
+            <button type="button" onclick="testMain()" class="btn btn-secondary mt-3 float-right">홈페이지로</button>
+        </section>
+
+        <section id="result" class="mx-auto my-5 px-3 py-5" >
+            <h1 class="pt-5">내 MBTI 테스트 결과는?</h1>
+            <div class="resultName">
+
+            </div>
+            <div id="resultImg" class="my-3 mx-auto col-12 col-lg-6 col-md-8 col-sm-10">
+                
+            </div>
+            <div class="resultDesc">
+
+            </div>
+            
+
+<!--            <button type="button" onclick="" class="btn btn-secondary mt-3">공유버튼만들거예요</button>-->
+            <button type="button" onclick="home()" class="btn btn-secondary mt-3">테스트 처음으로</button>
+            <button type="button" onclick="testMain()" class="btn btn-secondary mt-3 float-right">홈페이지로</button>
+            
+        </section>
+
+        
+        <script src="/js/data_csh.js"></script>
+        <script src="/js/start_csh.js"></script>
+    </div>
+
+
+</body>
+
+</html>
