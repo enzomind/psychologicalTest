@@ -24,5 +24,6 @@ public class Ysmember {
     @Column(length = 10, nullable = false)
     private String mgender;
 
-
+    @Column(length = 10, nullable = false)
+    private String mresult;
 }

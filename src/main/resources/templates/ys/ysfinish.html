@@ -39,37 +39,44 @@
       </section>
 
     <section id="list" class="mx-auto my-5 py-5 px-3">
-
         <div class="listItem">
+            <th:block th:fragment="content">
             <table class="table table-hover">
                 <h1>친구들은 이런 결과가 나왔어요!</h1>
                 <thead>
 
                 <tr>
-                    <th>No</th>
-                    <th>이름</th>
-                    <th>성별</th>
-                    <th>동물</th>
-
+                    <th scope="col">No</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">성별</th>
+                    <th scope="col">동물</th>
                 </tr>
                 </thead>
-                    <!-- 월요일날 하자.. -->
+
                 <tbody>
+
+                    <tr th:each="dto : ${result.dtoList}">
+                        <th scope="row">[[${dto.mid}]]</th>
+                        <th>[[${dto.mname}]]</th>
+                        <th>[[${dto.mgender}]]</th>
+                        <th>[[${dto.mresult}]]</th>
+                    </tr>
 
                 </tbody>
             </table>
+            </th:block>
         </div>
     </section>
 
 
     <script type="text/javascript" th:src="@{/js/data_ys.js}"></script>
-    <script type="text/javascript" th:src="@{/js/ysTestLogic.js}"></script>
     <script type="text/javascript" th:src="@{/js/ysResultView.js}"></script>
+
     <script>
         var pointNumber=[[${data}]];
         console.log(pointNumber);
+        setResult_ys()
     </script>
-    <script>setResult_ys()</script>
 
 
 

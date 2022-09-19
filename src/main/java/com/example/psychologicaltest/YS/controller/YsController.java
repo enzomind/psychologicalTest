@@ -1,6 +1,6 @@
 package com.example.psychologicaltest.YS.controller;
 
-import com.example.psychologicaltest.YS.dto.YsmemberRequestDTO;
+import com.example.psychologicaltest.YS.dto.YsmemberDTO;
 import com.example.psychologicaltest.YS.dto.YstestDTO;
 import com.example.psychologicaltest.YS.entity.Ysmember;
 import com.example.psychologicaltest.YS.entity.Ystest;
@@ -32,12 +32,13 @@ public class YsController {
     }
 
     @RequestMapping(value = "/insertMember", method = RequestMethod.POST)
-    public void insertMemberInfo(YsmemberRequestDTO ysmemberRequestDTO) throws Exception {
+    public void insertMemberInfo(YsmemberDTO ysmemberDTO) throws Exception {
 
         Ysmember ysmember = Ysmember.builder()
-                .mname(ysmemberRequestDTO.getMname())
-                .mgender(ysmemberRequestDTO.getMgender())
-                .mage(ysmemberRequestDTO.getMage())
+                .mname(ysmemberDTO.getMname())
+                .mgender(ysmemberDTO.getMgender())
+                .mage(ysmemberDTO.getMage())
+                .mresult(ysmemberDTO.getMresult())
                 .build();
 
         ysmemberRepository.save(ysmember);

@@ -34,6 +34,10 @@ function isValid() { //유효성 검사 함수
 
 function insertMemberInfo(){
 
+    const pointData = calResult();
+    pointNumber = pointData;
+    const paramData = infoList[pointData].param;
+
     if (!isValid()) {
         return false;
     }
@@ -43,7 +47,8 @@ function insertMemberInfo(){
     const memberParams = {
         mname: form.mname.value,
         mage: form.mage.value,
-        mgender: form.mgender.value
+        mgender: form.mgender.value,
+        mresult:paramData
     };
 
     $.ajax({
@@ -55,7 +60,7 @@ function insertMemberInfo(){
             alert("에러 발생 : " + error);
         },
         success: function (data) {
-            insertResult();
+            insertResult(pointData, paramData);
         }
     });
 
@@ -63,13 +68,11 @@ function insertMemberInfo(){
 
 
 
-function insertResult() {
-    const pointData = calResult();
+function insertResult(pointData, paramData) {
+    // const pointData = calResult();
+    // pointNumber = pointData;
 
-    pointNumber = pointData;
-    alert("DB insert단 pointData: " + pointNumber);
-
-    const paramData = infoList[pointData].param;
+    // const paramData = infoList[pointData].param;
 
     $.ajax({
         type: "POST",
