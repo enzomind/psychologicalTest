@@ -1,7 +1,6 @@
 
 function setResult_ys(){
     let point = pointNumber;
-    alert("finish.html에서 setResult 함수 호출 시, 데이터" + pointNumber);
 
     const finishName = document.querySelector('.finishname');
     finishName.innerHTML = infoList[point].name; //infoList의 n번째 name값을 가져와 innerHTML
