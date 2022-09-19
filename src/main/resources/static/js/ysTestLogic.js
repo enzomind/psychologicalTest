@@ -1,7 +1,6 @@
 const main = document.querySelector("#main");
 const qna = document.querySelector("#qna");
 const result = document.querySelector("#result");
-const finish = document.querySelector("#finish");
 const endPoint = 12;
 const select = [0,0,0,0,0,0,0,0,0,0,0,0];
 
@@ -65,13 +64,18 @@ function insertMemberInfo(){
 
 
 function insertResult() {
-    let pointData = calResult();
+    const pointData = calResult();
+
+    pointNumber = pointData;
+    alert("DB insert단 pointData: " + pointNumber);
+
     const paramData = infoList[pointData].param;
 
     $.ajax({
         type: "POST",
         url: "/insertResult",
         data: {
+            tcode:pointData,
             tresult: paramData
         },
         dataType: "text",
@@ -79,7 +83,7 @@ function insertResult() {
             alert("에러 발생 : " + error);
         },
         success: function (data) {
-            location.replace('/ys/ysfinish');
+            location.replace('/ys/ysfinish/?data='+pointNumber);
         }
     });
 
@@ -90,24 +94,6 @@ function calResult(){ //결과값 계산
     return result;
 }
 
-function setResult_ys(){
-    let point = calResult();
-    const finishName = document.querySelector('.finishname');
-    finishName.innerHTML = infoList[point].name; //infoList의 n번째 name값을 가져와 innerHTML.. 사악하다..!!
-
-    var finishImg = document.createElement('img');
-    const imgDiv = document.querySelector('#finishImg');
-    var imgURL = '/img/image-ys' + point + '.png';
-
-    finishImg.src = imgURL;
-    finishImg.alt = point;
-    finishImg.classList.add('img-fluid');
-    imgDiv.appendChild(finishImg);
-
-    const finishDesc = document.querySelector('.finishDesc');
-
-    finishDesc.innerHTML = infoList[point].desc;
-}
 
 function goResult(){
     qna.style.WebkitAnimation = "fadeOut 1s";
@@ -121,14 +107,7 @@ function goResult(){
             result.style.display = "block";
         }, 450)
     })
-    // setResult();
 }
-
-
-
-
-
-
 
 
 function addAnswer(answerText, qIdx, idx) {

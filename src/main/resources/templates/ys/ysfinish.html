@@ -25,7 +25,7 @@
 
   <!--result 섹션-->
       <section id="finish" class="mx-auto my-5 py-5 px-3">
-          <h1>당신의 결과는?!</h1>
+          <h1s>당신의 결과는?!</h1s>
           <div class="finishname">
 
           </div>
@@ -61,8 +61,14 @@
         </div>
     </section>
 
+
     <script type="text/javascript" th:src="@{/js/data_ys.js}"></script>
-    <script type="text/javascript" th:src="@{/js/start_ys.js}"></script>
+    <script type="text/javascript" th:src="@{/js/ysTestLogic.js}"></script>
+    <script type="text/javascript" th:src="@{/js/ysResultView.js}"></script>
+    <script>
+        var pointNumber=[[${data}]];
+        console.log(pointNumber);
+    </script>
     <script>setResult_ys()</script>
 
 
