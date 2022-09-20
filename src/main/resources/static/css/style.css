@@ -197,4 +197,12 @@ footer {
     float: left;
 }
 
+footer>#footer_div {
+    margin: 0 auto;
+    width: 1400px;
+    font-size: 24px;
+    margin-top: 20px;
+
+}
+
 /* footer */
