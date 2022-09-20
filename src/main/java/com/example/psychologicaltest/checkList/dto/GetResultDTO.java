@@ -4,11 +4,10 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.util.List;
-
 @Data
 @Builder
-public class GetQueryDTO {
+public class GetResultDTO {
     private Long id;
-    private String question;
-    private List<String> answer;
+    private String resultText;
+    private List<String> resultList;
 }

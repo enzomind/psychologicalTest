@@ -5,14 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link type="text/css" rel="stylesheet" href="/css/ForFont.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script defer type="text/javascript" src="/js/psyTest.js"></script>
+    <link type="text/css" rel="stylesheet" href="/css/ForFont.css">
+    <link type="text/css" rel="stylesheet" href="/css/UI.css">
+    >
 
 </head>
 <body>
-    <div class="initBox"><button onclick="queryModule.initQuery()" id="initBtn">심리 테스트 시작</button></div>
-    <div id="query" ></div>
-    <div id="button"></div>
+    <header>
+        <div class="header">헤더입니다</div>
+    </header>
+    <nav></nav> <!-- 네비게이션(메뉴) -->
+    <aside></aside> <!-- 사이드바 -->
+    <article class="articles">
+        <section class="article"><p>시작화면</p></section> <!-- 메인콘텐츠 -->
+
+    </article> <!-- 아티클 -->
+    <footer>
+        <div class="footer">
+            <div class="start">
+                <button class="startBtn" onclick="queryModule.initQuery()">시작하기</button>
+            </div>
+        </div>
+    </footer> <!-- 푸터 -->
+
+
 <!--    <ol>-->
 <!--        <li>-->
 <!--            <input type="button" onclick="testB()" class="test" name="test1" style="width: 600px;" value="1. 아침"><br>-->

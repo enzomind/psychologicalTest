@@ -8,4 +8,5 @@ import lombok.Data;
 public class AnswerDTO {
     private Long aId;
     private int answerNumber;
+    private Long qId;
 }

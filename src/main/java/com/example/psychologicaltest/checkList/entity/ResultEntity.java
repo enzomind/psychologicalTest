@@ -14,15 +14,15 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @ToString
 @Builder
-public class QuerySaveDataEntity {
+public class ResultEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private int selectedQueryId;
-    private int selectedNum;
     private String resultText;
-    private String result;
-    private Boolean sex; // true women, false man.
-    private int age;
+    private String r1;
+    private String r2;
+    private String r3;
+    private String r4;
+    private String r5;
 
 }

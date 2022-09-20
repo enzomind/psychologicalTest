@@ -19,6 +19,9 @@ public class QueryListEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String question;
-    private String selection01;
-    private String selection02;
+    private String a1;
+    private String a2;
+    private String a3;
+    private String a4;
+    private String a5;
 }

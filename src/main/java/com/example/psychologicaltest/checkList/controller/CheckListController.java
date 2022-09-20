@@ -1,6 +1,7 @@
 package com.example.psychologicaltest.checkList.controller;
 
 import com.example.psychologicaltest.checkList.dto.GetQueryDTO;
+import com.example.psychologicaltest.checkList.dto.GetResultDTO;
 import com.example.psychologicaltest.checkList.dto.PostQueryDTO;
 import com.example.psychologicaltest.checkList.entity.QueryListEntity;
 import com.example.psychologicaltest.checkList.service.CheckListService;
@@ -40,12 +41,19 @@ public class CheckListController {
         log.info("-----------selectRecordAll-------------------------------");
         return new ResponseEntity<>(checkListService.selectQueryAll(), HttpStatus.OK);
     }
+    @GetMapping(value = "/findAll2", produces = MediaType.APPLICATION_JSON_VALUE) // JSON 타입으로 응답(기본)
+    public ResponseEntity<List<GetResultDTO>> selectQueryAll2(){
+        log.info("-----------selectRecordAll-------------------------------");
+        return new ResponseEntity<>(checkListService.selectQueryAll2(), HttpStatus.OK);
+    }
+
+
     // record 입력
     @PostMapping(value = {"/saveData"}, consumes = MediaType.APPLICATION_JSON_VALUE) // JSON 타입의 요청만 받음
     public ResponseEntity<Long> saveQueryResult(@RequestBody PostQueryDTO postQueryDTO){
         log.info(postQueryDTO);
-        Long rno = checkListService.saveQueryResult(postQueryDTO);
-        return new ResponseEntity<>(rno, HttpStatus.OK);
+        Long dno = checkListService.saveQueryResult(postQueryDTO);
+        return new ResponseEntity<>(dno, HttpStatus.OK);
     }
     @PostMapping(value = {"/saveQuery"}, consumes = MediaType.APPLICATION_JSON_VALUE) // JSON 타입의 요청만 받음
     public ResponseEntity<String> saveQuery(@RequestBody QueryListEntity queryListEntity){

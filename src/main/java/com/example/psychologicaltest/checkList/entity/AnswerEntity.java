@@ -19,7 +19,6 @@ public class AnswerEntity {
     private String answer;
     @NotNull
     private int answerNumber;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn( name ="QUESTION_ENTITY_Q_ID")
     private QuestionEntity questionEntity;

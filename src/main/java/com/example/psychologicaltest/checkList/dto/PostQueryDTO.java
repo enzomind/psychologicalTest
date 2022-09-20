@@ -6,7 +6,10 @@ import lombok.Data;
 @Data
 @Builder
 public class PostQueryDTO {
-    private String selection; // 질문에 선택한 탑변 예> 1211511221
+    private int selectedQuery;
+    private int selectedNum;
+    private String resultText;
+    private String result;
     private Boolean sex; // true women, false man.
     private int age;
 }
