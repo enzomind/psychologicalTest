@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="/css/test_yj.css">
+    <script src="./js/test_yj.js" charset="utf-8"></script>
+    <title>성격테스트</title>
+    <!--    <script>-->
+    <!--        let obj=[{-->
+    <!--            q: "당신의 하루 중 좋아하는 메뉴",-->
+    <!--            a1: "아침",-->
+    <!--            a2: "점심"-->
+    <!--        }, {-->
+    <!--            q: "당신의 내일은 좋안하는",-->
+    <!--            a1: "아침",-->
+    <!--            a2: "점심"-->
+    <!--        }];-->
+    <!--        for(let a in obj){-->
+    <!--            console.log(obj[a]); // {q: "당신의 하루 중 좋아하는 메뉴",a1: "아침",a2: "점심"}-->
+    <!--        }-->
+    <!--    </script>-->
+</head>
+<body bgcolor="#d1e0d1">
+<br><br><br><br><br>
+<form action=" " method="post">
+    <div class="slide">
+        <ul>
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="테스트를 시작하려면 기본 정보를 입력해주세요."><br><br>
+                <input id="t_name" type="text" name="name" placeholder="이름" style="width: 500px; text-align: center;" ><br>
+                <input id="t_birth" type="text" name="birth" placeholder="생년월일" style="width: 500px; text-align: center;" ><br>
+                <input id="t_gender" type="text" name="gender" placeholder="성별" style="width: 500px; text-align: center;" ><br>
+            </li>
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="Q1. 당신이 하루 중 가장 좋아하는 때는?"><br><br>
+                <button class="btnA" name="test1" style="width: 600px;">1. 아침</button><br>
+                <button class="btnA" name="test1" style="width: 600px;">2. 아침</button><br>
+                <button class="btnA" name="test1" style="width: 600px;">3. 아침</button><br>
+                <button class="btnA" name="test1" style="width: 600px;">4. 아침</button><br>
+<!--                <input class="btnA" type="button" name="test1" style="width: 600px;" value="1. 아침"><br>-->
+<!--                <input class="btnA" type="button" name="test1" style="width: 600px;" value="2. 점심"><br>-->
+<!--                <input class="btnA" type="button" name="test1" style="width: 600px;" value="3. 저녁"><br>-->
+<!--                <input class="btnA" type="button" name="test1" style="width: 600px;" value="4. 새벽">-->
+            </li>
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="Q2. 당신이 ~ 때는?"><br><br>
+                <input type="button" name="test2" style="width: 600px;" value="1. test"><br>
+                <input type="button" name="test2" style="width: 600px;" value="2. test"><br>
+                <input type="button" name="test2" style="width: 600px;" value="3. test"><br>
+                <input type="button" name="test2" style="width: 600px;" value="4. test">
+            </li>
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="Q3. 당신이 ~ 때는?"><br><br>
+                <input type="button" name="test3" style="width: 600px;" value="1. test"><br>
+                <input type="button" name="test3" style="width: 600px;" value="2. test"><br>
+                <input type="button" name="test3" style="width: 600px;" value="3. test"><br>
+                <input type="button" name="test3" style="width: 600px;" value="4. test">
+            </li>
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="Q4. 당신이 ~ 때는?"><br><br>
+                <input type="button" name="test4" style="width: 600px;" value="1. test"><br>
+                <input type="button" name="test4" style="width: 600px;" value="2. test"><br>
+                <input type="button" name="test4" style="width: 600px;" value="3. test"><br>
+                <input type="button" name="test4" style="width: 600px;" value="4. test">
+            </li>
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="Q5. 당신이 ~ 때는?"><br><br>
+                <input type="button" name="test5" style="width: 600px;" value="1. test"><br>
+                <input type="button" name="test5" style="width: 600px;" value="2. test"><br>
+                <input type="button" name="test5" style="width: 600px;" value="3. test"><br>
+                <input type="button" name="test5" style="width: 600px;" value="4. test">
+            </li>
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="Q6. 당신이 ~ 때는?"><br><br>
+                <input type="button" name="test6" style="width: 600px;" value="1. test"><br>
+                <input type="button" name="test6" style="width: 600px;" value="2. test"><br>
+                <input type="button" name="test6" style="width: 600px;" value="3. test"><br>
+                <input type="button" name="test6" style="width: 600px;" value="4. test">
+            </li>
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="Q7. 당신이 ~ 때는?"><br><br>
+                <input type="button" name="test7" style="width: 600px;" value="1. test"><br>
+                <input type="button" name="test7" style="width: 600px;" value="2. test"><br>
+                <input type="button" name="test7" style="width: 600px;" value="3. test"><br>
+                <input type="button" name="test7" style="width: 600px;" value="4. test">
+            </li>
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="Q8. 당신이 ~ 때는?"><br><br>
+                <input type="button" name="test8" style="width: 600px;" value="1. test"><br>
+                <input type="button" name="test8" style="width: 600px;" value="2. test"><br>
+                <input type="button" name="test8" style="width: 600px;" value="3. test"><br>
+                <input type="button" name="test8" style="width: 600px;" value="4. test">
+            </li>
+        </ul>
+    </div>
+    <div class="submitBtn">
+        <input type="button" id="back" value="홈페이지" width="100">
+        <input type="button" id="next" value="시작하기" width="100">
+    </div>
+</form>
+
+</body>
+</html>

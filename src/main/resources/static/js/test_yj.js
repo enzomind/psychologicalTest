@@ -1,13 +1,3 @@
-// $(function(){
-//     $("#confirm").submit(function() {
-//         if ($("#t_name").val().trim() == "") {
-//             alert("이름을 작성하세요.");
-//             $("#t_name").focus();
-//             return false;
-//         }
-//     });
-// });
-
 $(document).ready(function(){
     var pages;
     var page_count;
@@ -41,13 +31,22 @@ $(document).ready(function(){
         back();
     });
     $('#next').click(function () {
-        $("#confirm").submit(function() {
-            if ($("#t_name").val().trim() == "") {
-                alert("이름을 작성하세요.");
-                $("#t_name").focus();
-                return back();
-            }
-        });
+
+        if ($("#t_name").val().trim() == "") {
+            alert("이름을 입력하세요.");
+            $("#t_name").focus();
+            return false;
+        }
+        if ($("#t_birth").val().trim() == "") {
+            alert("생년월일을 입력하세요.");
+            $("#t_name").focus();
+            return false;
+        }
+        if ($("#t_gender").val().trim() == "") {
+            alert("성별을 입력하세요.");
+            $("#t_gender").focus();
+            return false;
+        }
         next();
     });
 
@@ -60,11 +59,30 @@ $(document).ready(function(){
         }
     }
     function next() {
-        if(page_count>page_position){
-            pages.animate({
-                left:'-=600px'
-            });
-            page_position++;
-        }
+        let test = $(".btnA").val();
+        console.log(test);
+        test === null ? (()=>alert("선택하세요"))() : (()=>{
+            if(page_count>page_position){
+                pages.animate({
+                    left:'-=600px'
+                });
+                page_position++;
+            }
+        })()
     }
+
+
+
+    // $("#b_1").click(function () {
+    //     if (cal_clicked <= 0) {
+    //         alert("답변을 클릭하세요.");
+    //         return false;
+    //     }
+    // });
+    // $('#b_2').click(function () {
+    //     if (cal_clicked <= 0) {
+    //         alert("답변을 클릭하세요.");
+    //         return false;
+    //     }
+    // });
 });
