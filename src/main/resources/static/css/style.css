@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'jua';
+    src: url(../font/BMJUA_ttf.ttf)
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    font-family: 'jua';
+    margin: 0;
+    padding: 0;
+}
+
+/* 페이지 초기화 */
+
+#main {
+    background-color: whitesmoke;
+    float: left;
+    width: 100%;
+    margin: 50px auto;
+    height: 100%;
+}
+
+
+#top_menu {
+    width: 100%;
+    height: 200px;
+    float: left;
+}
+
+/* top메뉴 */
+
+
+
+#logo {
+    width: 150px;
+    height: 200px;
+    margin-left: 30px;
+
+}
+
+/*  로고 */
+
+
+#main_banner {
+    width: 100%;
+    height: 500px;
+    float: left;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: aliceblue;
+    margin-bottom: 50px;
+    position: relative;
+
+}
+
+#main_banner>img {
+    position: absolute;
+    width: 50px;
+    top: 85%;
+    z-index: 10;
+  
+}
+
+#main_banner>#left {
+ left: 300px;   
+}
+
+#main_banner>#right {
+    left: 1000px   
+   }
+
+/* 메인 베너*/
+
+
+
+#wrap {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+/* wrap */
+
+
+#content {
+    width: 100%;
+    height: 800px;
+    margin: 0 auto;
+}
+
+.link {
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    padding-top: 50px;
+}
+
+
+/* content */
+
+
+#slide {
+    margin-left: -600px;
+    margin-top: 100px;
+    width: 3000px;
+    height: 300px;
+    position: absolute;
+
+}
+
+.slide_banner {
+    margin: 0 50px;
+    height: 300px;
+    float: left;
+
+}
+
+.slide_banner>a {
+    display: block;
+}
+
+.slide_banner>a>img {
+    display: block;
+    width: 350px;
+    height: 250px;
+    border-radius: 15px;
+    
+}
+
+#wrap>#main_banner>#slide>.slide_banner{-webkit-transition: 0.5s;}
+
+
+#wrap>#main_banner>#slide>.slide_banner:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#content>.link>.test {
+    transition: 0.5s;
+}
+
+.slide_banner>p {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 28px;
+}
+
+/* slide */
+
+
+
+.test {
+    width: 400px;
+    height: 250px;
+    position: relative;
+    display: inline-block;
+
+
+}
+
+.test_name {
+    position: absolute;
+    top: 90%;
+    left: 6%;
+    margin: 0 auto;
+    width: 352px;
+    height: 60px;
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.test_name>p {
+
+    margin-top: 20px;
+    font-size: 24px;
+    font-family: 'jua';
+    font-weight: 200px;
+}
+
+/* 테스트 덩어리 */
+
+
+.main_image {
+    border-radius: 15px;
+    width: 350px;
+    height: 250px;
+}
+
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(231, 231, 231);
+    float: left;
+}
+
+/* footer */
