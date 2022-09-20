@@ -18,6 +18,7 @@ $(document).ready(function() {
     });
     $('.next').click(function () {
         next();
+
     });
 
     //input button id="back" 클릭했을 때 이전 방향으로 600만큼 이동하기
@@ -49,16 +50,19 @@ $(document).ready(function() {
     })
 
     result = [];
+
     test = {};
 
     $('.next').click(function () {
         result.push($(this).val());
-        console.log(result)
+        console.log(result);
     });
 
+
     $('#testfinish').click(function () {
+
         for(i=1; i<result.length+1; i++) {
-            test['test' + i] = result[i]
+            test['test' + i] = result[i-1]
         };
         console.log(test)
         $.ajax( {
