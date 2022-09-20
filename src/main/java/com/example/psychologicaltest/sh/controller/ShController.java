@@ -47,7 +47,9 @@ public class ShController {
     @ResponseBody
     @RequestMapping(value = "result2.do", method = RequestMethod.POST)
     public void resTable2(@Param("mname") String mname, @Param("mgender") String mgender,@Param("mage") int mage, ShUserEntity shUserEntity, HttpServletRequest request){
+
         ShUserEntity shUserResult1 = ShUserEntity.builder().mname(mname).mgender(mgender).mage(mage).build();
+
         shUserRepository2.save(shUserResult1);
 
         System.out.println(mname);

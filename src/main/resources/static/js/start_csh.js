@@ -263,13 +263,17 @@ function testMain() {
 }
 
 function formStart() {
-    if($("#mname").value === undefined || $("#mgender").value === undefined || $("#mage").value === undefined){
+    var aa = document.getElementById('mname').value;
+    var bb = document.getElementById('mgender').value;
+    var cc = document.getElementById('mage').value;
+
+    if(aa === '' || bb === '' || cc === '' ){
     console.log("왜체크안하냐;" );
-    alert("빈 칸이 있지 않은지 확인해 주세요.");
-    } else {
         console.log($("#mname").value);
         console.log($("#mgender").value);
-        console.log($("#mage").value);
+        console.log($("#mage").value );
+    alert("빈 칸이 있지 않은지 확인해 주세요.");
+    } else {
         form.style.display = "none";
         main.style.display = "block";
         qna.style.display = "none";
