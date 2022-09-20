@@ -28,4 +28,11 @@ public class Controller {
 
         return "ys/ysfinish";
     }
+
+    @GetMapping("/yj/yjuser")
+    public String intoQuiz_yj() {
+
+        return "yj/yjuser";
+    }
+
 }

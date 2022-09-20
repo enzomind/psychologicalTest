@@ -21,6 +21,6 @@ $(document).ready(function(){
             $("#t_gender").focus();
             return false;
         }
-        UserSubmit();
+        userSubmit();
     });
 });

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="/css/test_yj.css">
+    <title>성격테스트</title>
+</head>
+<body bgcolor="#d1e0d1">
+<br><br><br><br><br>
+<form id="test-insert" method="post"><!--insert 하는 폼태그-->
+    <div class="slide">
+        <ul>
+            <!--첫번째 슬라이드-->
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="Q1. 하루 중 당신이 가장 좋아하는 때는?"><br><br>
+                <button type="button" class="next" name="test1" value="E" style="width: 600px;">1. 새벽 공기를 맞을 때</button><br>
+                <button type="button" class="next" name="test1" value="I" style="width: 600px;">2. 오후 햇살이 눈부실 때</button><br>
+                <button type="button" class="next" name="test1" value="E" style="width: 600px;" >3. 저녁 공기가 선선할 때</button><br>
+                <button type="button" class="next" name="test1" value="I" style="width: 600px;">4. 밤하늘에 별이 보일 때</button>
+            </li>
+            <!--두번째 슬라이드-->
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="Q2. 하늘을 보는데 희한한 무언가가 보인다. 무엇일까?"><br><br>
+                <button type="button" class="next" name="test2" style="width: 600px;" value="S">1. 구름</button><br>
+                <button type="button" class="next" name="test2" style="width: 600px;" value="N">2. UFO</button><br>
+                <button type="button" class="next" name="test2" style="width: 600px;" value="S">3. 비행기</button><br>
+                <button type="button" class="next" name="test2" style="width: 600px;" value="N">4. 드론</button>
+            </li>
+            <!--세번째 슬라이드-->
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="Q3. 당신이 아끼는 흰 셔츠에 친구가 커피를 흘렸다."><br><br>
+                <button type="button" class="next" name="test3" style="width: 600px;" value="T">1. 일단 버럭 화를 낸다.</button><br>
+                <button type="button" class="next" name="test3" style="width: 600px;" value="F">2. 아끼는 옷인데..속상하지만 참는다.</button><br>
+                <button type="button" class="next" name="test3" style="width: 600px;" value="T">3. 세탁비 물어내라고 한다.</button><br>
+                <button type="button" class="next" name="test3" style="width: 600px;" value="F">4. 그럴수도 있지! 괜찮다고 한다.</button>
+            </li>
+            <!--네번째 슬라이드-->
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="Q4. 주말에 브런치를 먹으러 향한 곳은?"><br><br>
+                <button type="button" class="next" name="test4" style="width: 600px;" value="J">1. 항상 즐겨 가던 곳</button><br>
+                <button type="button" class="next" name="test4" style="width: 600px;" value="P">2. 새로 오픈한 곳</button><br>
+                <button type="button" class="next" name="test4" style="width: 600px;" value="J">3. 맛집으로 소문난 곳</button><br>
+                <button type="button" class="next" name="test4" style="width: 600px;" value="P">4. 분위기가 좋아보이는 곳</button>
+            </li>
+            <!--다섯번째 슬라이드-->
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="Q5. 너무 더운 날씨.. 당신이 선택한 음료는?"><br><br>
+                <button type="button" class="next" name="test5" style="width: 600px;" value="E">1. 아이스 아메리카노</button><br>
+                <button type="button" class="next" name="test5" style="width: 600px;" value="I">2. 상큼한 아이스티</button><br>
+                <button type="button" class="next" name="test5" style="width: 600px;" value="E">3. 달달한 초코스무디</button><br>
+                <button type="button" class="next" name="test5" style="width: 600px;" value="I">4. 씹는 맛이 있는 버블티</button>
+            </li>
+            <!--여섯번째 슬라이드-->
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="Q6. 맘에 드는 이성을 발견했다! 당신의 행동은?"><br><br>
+                <button type="button" class="next" name="test6" style="width: 600px;" value="S">1. 아쉽지만..지나간다.</button><br>
+                <button type="button" class="next" name="test6" style="width: 600px;" value="N">2. 번호가 적힌 쪽지를 건낸다</button><br>
+                <button type="button" class="next" name="test6" style="width: 600px;" value="S">3. 옆에 있는 친구한테 말한다.</button><br>
+                <button type="button" class="next" name="test6" style="width: 600px;" value="N">4. 스몰토크을 시도한다.</button>
+            </li>
+            <!--일곱번째 슬라이드-->
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="Q7. 친구가 인스타그램에 우울한 글을 올렸다. 어쩌지?"><br><br>
+                <button type="button" class="next" name="test7" style="width: 600px;" value="T">1. 하트만 누른다.</button><br>
+                <button type="button" class="next" name="test7" style="width: 600px;" value="F">2. DM으로 무슨 일이냐고 물어본다.</button><br>
+                <button type="button" class="next" name="test7" style="width: 600px;" value="T">3. 가만히 있는다.</button><br>
+                <button type="button" class="next" name="test7" style="width: 600px;" value="F">4. 아무 것도 모르는 척 일단 만나자고 해본다.</button>
+            </li>
+            <!--마지막 슬라이드-->
+            <li><input class="text" type="text" style="width: 600px; height: 60px;" value="Q8. 매일 다이어리를 작성하는 당신. 다이어리의 내용은?"><br><br>
+                <button type="button" class="next" name="test8" style="width: 600px;" value="J">1. 시간별로 정리 된 하루</button><br>
+                <button type="button" class="next" name="test8" style="width: 600px;" value="P">2. 하루동안 겪은 속마음</button><br>
+                <button type="button" class="next" name="test8" style="width: 600px;" value="J">3. 일기는 나랑 안맞아. 일정 계획표.</button><br>
+                <button type="button" class="next" name="test8" style="width: 600px;" value="P">4. 나도 내가 뭐라는지 모르겠다. 주절주절 이야기.</button>
+            </li>
+
+            <li>
+                <button type="button" class="finaltext" style="width: 600px; height: 100px;">🍦🍧🍨모든 항목에 답변을 완료하였습니다!🍦🍧🍨 <br>당신에게 어울리는 아이스크림이 궁금하다면?</button><Br><Br><Br>
+                <input type="button" class="finish" id="testfinish" value="결과보러가기" onclick="location.href='/success'" width="100">
+            </li>
+        </ul>
+    </div>
+    <!--슬라이드 이동 버튼-->
+    <div class="submitBtn">
+        <input type="button" class="back" value="처음부터" onclick="location.href='/yj/yjtest'" width="100" >
+        <input type="button" class="back" value="이전" width="100" ><br>
+
+    </div>
+</form>
+<script src="/js/test_yj.js" charset="utf-8"></script>
+</body>
+</html>
