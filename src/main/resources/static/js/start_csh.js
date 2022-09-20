@@ -263,11 +263,19 @@ function testMain() {
 }
 
 function formStart() {
-    form.style.display = "none";
-    main.style.display = "block";
-    qna.style.display = "none";
-    result.style.display = "none";
-    ajax2();
+    if($("#mname").value === undefined || $("#mgender").value === undefined || $("#mage").value === undefined){
+    console.log("왜체크안하냐;" );
+    alert("빈 칸이 있지 않은지 확인해 주세요.");
+    } else {
+        console.log($("#mname").value);
+        console.log($("#mgender").value);
+        console.log($("#mage").value);
+        form.style.display = "none";
+        main.style.display = "block";
+        qna.style.display = "none";
+        result.style.display = "none";
+        ajax2();
+    }
 }
 
 
