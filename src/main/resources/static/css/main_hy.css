@@ -1,0 +1,60 @@
+#main{
+  background-color: whitesmoke;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+  display: none;
+}
+
+#userinfo{
+  background-color: whitesmoke;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#userinfo>p {
+  background-color: green;
+  padding: 10px;
+  font-size: 24px;
+}
+
+#userinfo>select {
+  margin: 20px 0;
+  height: 30px;
+}
+
+#userinfo>#name {
+  margin: 20px 0;
+  width: 250px;
+  height: 50px;
+  font-size: 20px;
+}
+
+#userinfo>#age{
+  margin: 20px 0;
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+}
+
+p{
+  font-size: 20px;
+  margin: 30px 0;
+}
+
+
+h1{margin-bottom: 30px;}
+
+.btn-outline-danger {
+  border-color: darkgreen;
+  color: darkgreen;
+  font-size: 18px;
+  width: 200px;
+}
+
+.btn-outline-danger:hover {
+  background-color: rgb(102, 102, 102);
+  border-color: darkgreen;
+}
+
