@@ -1,0 +1,42 @@
+#qna{
+    display: none;
+}
+
+.qBox {
+    background-color: whitesmoke;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 30px;
+    border: solid;
+}
+
+.answerList {
+    background-color: whitesmoke;
+    border-radius: 20px;
+    display: block;
+    width: 80%;
+}
+
+/* hover가 버튼(answerList)에 올려졌을 때 focus는 클릭되었을 때 */
+.answerList:hover, .answerList:focus {
+    background-color: white; /* 버튼색 */
+    color: red; /* 글자색 */
+}
+
+.answerBox{
+    
+    font-size: 20px; /* 보니까 여기에 폰트사이즈 줘도되고 answerList쪽에 줘도 되는 것 같음 */
+
+}
+
+.status{ /*진행바 상위 디아브 */
+    height: 20px;
+    width: 80%;
+    background-color: white;
+    border-radius: 20px;
+}
+.statusBar{ /*진행바 디아브 */
+    height: 100%;
+    background-color: aqua;
+    border-radius: 20px;
+}

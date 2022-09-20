@@ -1,0 +1,51 @@
+#qna {
+    display: none;
+}
+
+.qBox {
+    background-color: black;
+    color: yellow;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 24px;
+    width: 80%;
+}
+
+.answerList {
+    background-color: black;
+    color: yellowgreen;
+    border-radius: 20px;
+    display: block;
+    width: 80%;
+    border: 1px solid yellowgreen;
+    font-size: 20px;
+}
+
+.answerList:hover,
+.answerList:focus {
+    background-color: yellowgreen;
+    color: black;
+}
+
+.status {
+    height: 20px;
+    width: 80%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.statusBar {
+    height: 100%;
+    border-radius: 20px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b4e391+0,61c419+50,b4e391+100;Green+3D */
+    background: #b4e391;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #b4e391 0%, #61c419 50%, #b4e391 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b4e391 0%, #61c419 50%, #b4e391 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b4e391 0%, #61c419 50%, #b4e391 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4e391', endColorstr='#b4e391', GradientType=0);
+    /* IE6-9 */
+}
