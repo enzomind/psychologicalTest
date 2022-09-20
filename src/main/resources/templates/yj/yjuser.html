@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="/css/test_yj.css">
+  <title>성격테스트</title>
+</head>
+<body bgcolor="#d1e0d1">
+<br><br><br><br><br>
+
+<form action="/userInsert" method="POST"><!--insert 하는 폼태그-->
+  <div class="slide">
+    <ul>
+      <!--첫번째 슬라이드 : 사용자 정보 입력-->
+      <li><input class="text" type="text" style="width: 600px; height: 60px;" value="테스트를 시작하려면 기본 정보를 입력해주세요."><br><br>
+        <input id="t_name" type="text" name="name" placeholder="이름" style="width: 500px; text-align: center;" ><br>
+        <input id="t_birth" type="text" name="birth" placeholder="생년월일" style="width: 500px; text-align: center;" ><br>
+        <input id="t_gender" type="text" name="gender" placeholder="성별" style="width: 500px; text-align: center;" >
+      </li>
+    </ul>
+  </div>
+  <div class="submitBtn">
+    <input type="button" id="home" value="홈페이지" onclick="location.href='/'" width="100">
+    <input type="submit" id="UserSubmit" value="시작하기" width="100"><br>
+  </div>
+</form>
+<script src="/js/user_yj.js" charset="utf-8"></script>
+</body>
+</html>

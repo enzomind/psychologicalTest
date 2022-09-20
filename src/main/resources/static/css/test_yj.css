@@ -2,6 +2,7 @@
     margin: 0; padding: 0;
 }
 
+/*화면에 보여지는 사이즈 및 정렬*/
 .slide{
     width: 600px;
     height: 400px;
@@ -22,16 +23,48 @@
     margin: 10px 0px 50px 0px;
     text-align: center;
 }
-#text {
+
+/*--------------------------------------------------------------*/
+
+/*선택항목의 button 태그 스타일*/
+.slide ul li button {
+    border: 2px solid #89aa88;
+    color: #89aa88;
+    background-color: white;
+    height: 45px;
+    cursor: pointer;
+}
+.slide ul li button.on { /*버튼 클릭 시 배경 색 고정*/
+    background-color: #89aa88;
+    color: white;
+}
+.slide ul li button:hover { /*버튼에 마우스 올릴 시 배경 색 변경*/
+    color: white;
+    background-color: #89aa88;
+}
+
+.slide ul li button.finaltext {
+    border: 2px solid #89aa88;
+    color: #89aa88;
+    background-color: white;
+    height: 45px;
+    font-size: large;
+    font-weight: bold;
+}
+
+/*--------------------------------------------------------------*/
+
+/*input class="text"의 스타일*/
+.slide ul li input.text {
     border: 0px solid #89aa88;
     color: white;
     background-color: #89aa88;
     height: 45px;
     text-align: center;
-    font-weight: bold;
     font-size: medium;
+    font-weight: bold;
 }
-
+/*input 태그의 스타일*/
 .slide ul li input {
     border: 2px solid #89aa88;
     color: #89aa88;
@@ -39,17 +72,18 @@
     height: 45px;
     cursor: pointer;
 }
-.slide ul li input.on {
+.slide ul li input.on { /* input 버튼 클릭 시 배경 색 고정*/
     background-color: #89aa88;
     color: white;
 }
-
-.slide ul li input:hover {
+.slide ul li input:hover { /* input 버튼에 마우스 올릴 시 배경 색 변경*/
     color: white;
     background-color: #89aa88;
 }
 
+/*--------------------------------------------------------------*/
 
+/*div class="submit"의 스타일*/
 .submitBtn {
     height: 52px;
     line-height: 55px;
@@ -57,8 +91,28 @@
     color: #89aa88;
     text-align: center;
 }
+.submitBtn input {  /* div 안에 있는 input 버튼 기본 스타일*/
+    border: 2px solid #89aa88;
+    background-color: white;
+    color: #89aa88;
+    padding: 5px;
+}
+.submitBtn input:hover { /* input 버튼에 마우스 올릴 시 색 변경*/
+    color: white;
+    background-color: #89aa88;
+}
 
-#back{
+.back{  /*input id="back"의 크기 및 모양 변경*/
+    width: 150px;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+#next{  /*input id="next"의 크기 및 모양 변경*/
     width: 150px;
     height: 40px;
     border-top-left-radius: 10px;
@@ -69,7 +123,7 @@
     z-index: 1;
 }
 
-#next{
+.finish{  /*input class="finish"의 크기 및 모양 변경*/
     width: 150px;
     height: 40px;
     border-top-left-radius: 10px;
@@ -80,24 +134,27 @@
     z-index: 1;
 }
 
-div button {
-    border: 2px solid #89aa88;
-    background-color: white;
-    color: #89aa88;
-    padding: 5px;
+#home{  /*input id="back"의 크기 및 모양 변경*/
+    width: 150px;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
 }
-button:hover {
-    color: white;
-    background-color: #89aa88;
+#UserSubmit{  /*input id="next"의 크기 및 모양 변경*/
+    width: 150px;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
 }
 
-.submitBtn input {
-    border: 2px solid #89aa88;
-    background-color: white;
-    color: #89aa88;
-    padding: 5px;
-}
-.submitBtn input:hover {
-    color: white;
-    background-color: #89aa88;
-}
+
+
+

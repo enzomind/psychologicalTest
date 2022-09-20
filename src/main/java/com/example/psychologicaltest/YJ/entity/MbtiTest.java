@@ -5,13 +5,13 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name="mbti")
-@ToString(exclude = "user")
+@Table(name="yjmbti_test")
+@ToString(exclude = "yjuser")
 @Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Mbti {
+public class MbtiTest {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long no;
