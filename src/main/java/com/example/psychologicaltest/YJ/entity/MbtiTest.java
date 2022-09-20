@@ -5,8 +5,8 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name="mbti_test")
-@ToString(exclude = "user")
+@Table(name="yjmbti_test")
+@ToString(exclude = "yjuser")
 @Getter
 @Builder
 @AllArgsConstructor
