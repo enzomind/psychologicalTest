@@ -1,0 +1,103 @@
+.final {
+    background-color: rgb(253, 249, 231);
+    width: 800px;
+    height: 910px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1,
+h2 {
+    color: rgb(103, 81, 9);
+    font-family: 'Jua', sans-serif;
+}
+
+.home {
+    border: 2px solid #c4d9c4;
+    color: white;
+    background-color: #c4d9c4;
+    font-size: 18px;
+    font-family: 'Jua', sans-serif;
+    width: 200px;
+    height: 55px;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.home:hover {
+    /*버튼에 마우스 올릴 시 배경 색 변경*/
+    color: rgb(204, 139, 157);
+    background-color: white;
+}
+
+#content {
+    font-family: 'Dongle', sans-serif;
+    border: 2px solid #c4d9c4;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+p {
+    font-size: 40px;
+}
+
+.share {
+    width: 500px;
+    height: 170px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    background-color: rgb(253, 249, 231);
+}
+
+.share button {
+    background-color: rgb(253, 249, 231);
+    border: none;
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 1000px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.wrapper .tableBox {
+    top: 50px;
+    left: 50px;
+    height: 150px;
+    overflow-y: scroll;
+    border-top: 2px solid #c4d9c4;
+
+}
+
+.tableData {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Dongle', sans-serif;
+    font-size: 27px;
+    color: rgb(88, 69, 7);
+}
+
+.tableData thead tr th {
+    position: sticky;
+    top: 0;
+    background: rgb(253, 249, 231);
+}
+
+.tableData thead tr th,
+.tableData tbody tr td {
+    padding: 15px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(253, 249, 231);
+    border-right: 1px solid rgb(253, 249, 231);
+    word-break: break-all;
+}
