@@ -18,3 +18,7 @@ function setResult_ys(){
 
     finishDesc.innerHTML = infoList[point].desc;
 }
+
+function gointro(){
+    return location.replace('/ys/ystest/');
+}
