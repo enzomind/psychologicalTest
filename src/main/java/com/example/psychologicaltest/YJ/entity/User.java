@@ -14,8 +14,11 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class User {
     @Id
-    private String name;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long no;
 
+    @Column
+    private String name;
     @Column
     private String birth;
     @Column
