@@ -17,3 +17,17 @@ Controller, DTO, Service, Repo(JPA), View 구성하여 심리테스트 모듈을
 - 하나의 페이지에서 12가지 문항별 답변을 선택하고 결과 페이지로 넘어가는 인터렉션 구현<br/>
 - 모든 문항 답변이 완료된 후, 사용자의 정보를 입력받아 결과 페이지에서 출력(친구는 어떤 결과가 나왔을까요?)<br/>
 - 문항 및 답변을 배열로 구성하여 답변에 따라 결과가 변경되는 로직 적용<br/>
+
+
+주요 화면 스크린샷
+
+[1] Quiz main
+![maincapture](https://user-images.githubusercontent.com/102308415/191647171-a1857b72-021d-48b2-92ef-ef5994030f38.JPG)
+
+[2] Quiz 
+![quizcapture](https://user-images.githubusercontent.com/102308415/191646937-fc82677d-8053-4c7e-a8a4-a46dadc7672e.JPG)
+
+[3] Result
+![resultcapture](https://user-images.githubusercontent.com/102308415/191646932-0e3b348f-5f52-4b1c-a5d5-8b316243cd97.JPG)
+
+
